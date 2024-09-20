@@ -1,5 +1,5 @@
 trigger:
-  - main  # Cambia esto por la rama que desees
+  - main
 
 pool:
   vmImage: 'windows-latest'
@@ -34,7 +34,6 @@ steps:
     command: 'publish'
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    publishWebProjects: false  # Indica que es un proyecto web
 
 - task: PublishBuildArtifacts@1
   inputs:
