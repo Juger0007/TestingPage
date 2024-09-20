@@ -34,6 +34,7 @@ steps:
     command: 'publish'
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    publishWebProjects: true  # Asegúrate de que esto sea true para proyectos web
 
 - task: PublishBuildArtifacts@1
   inputs:
